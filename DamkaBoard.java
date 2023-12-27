@@ -3,6 +3,12 @@
  */
 public class DamkaBoard {
 	public static void main(String[] args) {
-		//// Put your code here
+		int n = Integer.parseInt(args[0]);
+			for (int i = 1; i < n; i++){
+				for (int y = 1; y < n; y++){
+				System.out.print("* ");
+			}
+			System.out.println("* ");
 	}
+  }
 }

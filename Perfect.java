@@ -9,7 +9,6 @@ public class Perfect {
 		String sumDivisorsString = "";
 		while (divisors < n){
 		if ( n % divisors == 0) {
-			System.out.println(divisors);
 			sumDivisors = sumDivisors + divisors;
             sumDivisorsString = sumDivisorsString + " + " + divisors;
 		}
