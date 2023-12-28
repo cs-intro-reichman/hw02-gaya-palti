@@ -5,10 +5,10 @@
 public class InOrder {
 	public static void main (String[] args) {
     	int oldRandom = (int)(10 * Math.random());
-		System.out.println(oldRandom);
+		System.out.print(oldRandom);
 		int currentRandom = (int)(10 * Math.random());
 		while (currentRandom >= oldRandom){
-			System.out.println(currentRandom);
+			System.out.print(" " + currentRandom);
 			oldRandom = currentRandom;
 			currentRandom = (int)(10 * Math.random());
 		}
