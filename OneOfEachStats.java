@@ -9,12 +9,43 @@ import java.util.Random;
  */
 public class OneOfEachStats {
 	public static void main (String[] args) {
-		// Gets the two command-line arguments
 		int T = Integer.parseInt(args[0]);
-		int seed = Integer.parseInt(args[1]);
-		// Initailizes a random numbers generator with the given seed value
-        Random generator = new Random(seed);  
+		int seed = Integer.parseInt(args[1]); // Initailizes a random numbers generator with the given seed value
+        Random generator = new Random(seed);  	
+		int child2 = 0;	
+		int child3 = 0;	
+		int child4 = 0;	
+		int maxChild = 0;
+		double children = 0;
+
+		for (int i = 0; i < T; i++){
+			boolean girl = false;
+			boolean boy = false;
+			int childInFam = 0;
+			while (!boy || !girl){
+				double rand = generator.nextDouble();
+				if (rand <= 0.5) girl = true;
+				else boy = true;
+				children ++;
+				childInFam ++;
+			}
+			if (childInFam == 2) child2 ++; 
+			else if (childInFam == 3) child3 ++;
+			else if (childInFam == 4) child4 ++;
+		}
+
+		maxChild = (Math.max(child2 , Math.max(child3 , child4)));
+		if (maxChild == child2) maxChild = 2;
+		else if (maxChild == child3) maxChild = 3;
+		else if (maxChild == child4) maxChild = 4;
 		
+		System.out.println("Average: " + (children / T) + " children to get at least one of each gender.");
+		System.out.println("Number of families with 2 children: " + child2);
+		System.out.println("Number of families with 3 children: " + child3);
+		System.out.println("Number of families with 4 children: " + child4);
+		System.out.println("The most common number of children is " + maxChild + ".");
+	}
+}		
 		//// In the previous version of this program, you used a statement like:
 		//// double rnd = Math.random();
 		//// Where "rnd" is the variable that stores the generated random value.
@@ -25,5 +56,3 @@ public class OneOfEachStats {
 		//// randomization will be based on the given seed.
 		//// This is the only change that you have to do in the program.
 		    
-	}
-}
