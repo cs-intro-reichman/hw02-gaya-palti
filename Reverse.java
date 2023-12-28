@@ -6,9 +6,12 @@ public class Reverse {
 	public static void main (String[] args){
 		String s = args[0];
 		int l = s.length();
-		for (int i = l-1; i >= 0; i--){
-		System.out.print(s.charAt(i));}
-		if (l % 2 == 0){System.out.print("\nThe middle character is " + s.charAt((l - 1) / 2));}
-		else {System.out.print("\nThe middle character is " + s.charAt(l / 2));}
+		for (int i = l-1; i >= 0; i--) {
+			System.out.print(s.charAt(i));}
+		if (l % 2 == 0) {
+			System.out.print("\nThe middle character is " + s.charAt((l - 1) / 2));
+		} else {
+			System.out.print("\nThe middle character is " + s.charAt(l / 2));
 		}
 	}
+}

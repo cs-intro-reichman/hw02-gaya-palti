@@ -6,9 +6,10 @@ public class Divisors {
 		int x = Integer.parseInt(args[0]);
 		int divisors = 1;
 		while (divisors <= x){
-		if ( x % divisors == 0) {System.out.println(divisors);}
-        divisors++;
-	}
-  }
+			if ( x % divisors == 0) {
+				System.out.println(divisors);}
+        	divisors++;
+		}
+  	}
 }
 
