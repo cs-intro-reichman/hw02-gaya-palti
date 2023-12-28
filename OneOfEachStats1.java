@@ -28,7 +28,7 @@ public class OneOfEachStats1 {
 			}
 			if (childInFam == 2) child2 ++; 
 			else if (childInFam == 3) child3 ++;
-			else if (childInFam == 4) child4 ++;
+			else if (childInFam >= 4) child4 ++;
 		}
 
 		maxChild = (Math.max(child2 , Math.max(child3 , child4)));
@@ -39,7 +39,7 @@ public class OneOfEachStats1 {
 		System.out.println("Average: " + (children / T) + " children to get at least one of each gender.");
 		System.out.println("Number of families with 2 children: " + child2);
 		System.out.println("Number of families with 3 children: " + child3);
-		System.out.println("Number of families with 4 children: " + child4);
+		System.out.println("Number of families with 4 or more children: " + child4);
 		System.out.println("The most common number of children is " + maxChild + ".");
 	}
 }
