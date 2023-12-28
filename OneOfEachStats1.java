@@ -9,8 +9,6 @@ import java.util.Random;
 public class OneOfEachStats1 {
 	public static void main (String[] args) {
 		int T = Integer.parseInt(args[0]);
-		int seed = Integer.parseInt(args[1]); // Initailizes a random numbers generator with the given seed value
-        Random generator = new Random(seed);  	
 		int child2 = 0;	
 		int child3 = 0;	
 		int child4 = 0;	
@@ -22,7 +20,7 @@ public class OneOfEachStats1 {
 			boolean boy = false;
 			int childInFam = 0;
 			while (!boy || !girl){
-				double rand = generator.nextDouble();
+				double rand = Math.random();
 				if (rand <= 0.5) girl = true;
 				else boy = true;
 				children ++;
