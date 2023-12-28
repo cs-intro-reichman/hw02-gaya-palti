@@ -5,6 +5,22 @@
  */
 public class OneOfEach {
 	public static void main (String[] args) {
-		//// Put your code here
+		boolean girl = false;
+		boolean boy = false;
+		String child = "";
+		int children = 0;
+		while (!boy || !girl){
+			double rand = Math.random();
+			if (rand <= 0.5){
+				child += "g ";
+				girl = true;
+			} else {
+				child += "b ";
+				boy = true;
+			}
+			children ++;
+		}
+		System.out.println(child);
+		System.out.println("You made it... and you now have " + children + " children.");
 	}
 }
